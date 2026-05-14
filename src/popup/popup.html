@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tab Manager</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>Tab Manager</h1>
+      <div class="tabs">
+        <button id="tab-active" class="tab-btn active">Active Tabs</button>
+        <button id="tab-dumped" class="tab-btn">Saved Groups</button>
+      </div>
+    </header>
+
+    <main>
+      <!-- View: Active Tabs -->
+      <section id="view-active" class="view active">
+        <div class="actions">
+          <button id="group-tabs">Group by Domain</button>
+          <button id="close-duplicates" class="btn-secondary">Close Duplicates</button>
+        </div>
+        <div class="stats">
+          <p>Open Tabs: <span id="tab-count">0</span></p>
+        </div>
+        <ul id="tab-list" class="item-list">
+          <!-- Tabs dynamically inserted here -->
+        </ul>
+      </section>
+
+      <!-- View: Dumped Groups -->
+      <section id="view-dumped" class="view">
+        <div class="actions" style="justify-content: space-between; align-items: center; margin-bottom: 8px;">
+          <p class="helper-text" style="margin: 0;">Inactive groups are dumped here.</p>
+          <button id="btn-import-json" class="btn-secondary"
+            style="flex: 0 0 auto; padding: 6px 10px; font-size: 11px;">Import JSON</button>
+          <input type="file" id="file-import" accept=".json" style="display: none;">
+        </div>
+        <ul id="dumped-list" class="item-list">
+          <!-- Dumped groups dynamically inserted here -->
+        </ul>
+      </section>
+
+      <!-- Storage Limit Modal -->
+      <div id="storage-modal" class="modal-overlay" style="display: none;">
+        <div class="modal-content">
+          <h2>Storage Limit Reached</h2>
+          <p>Your saved JSON groups have exceeded the 1MB limit. Please choose an action:</p>
+          <div class="modal-actions">
+            <button id="btn-manual-remove" class="btn-secondary">Remove tabs manually</button>
+            <button id="btn-auto-remove">Auto remove oldest group</button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="popup.js"></script>
+</body>
+
+</html>

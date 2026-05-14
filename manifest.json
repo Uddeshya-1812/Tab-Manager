@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Tab Manager",
+  "version": "1.0.0",
+  "description": "Groups tabs, closes duplicates, and automatically hibernates inactive groups.",
+  "action": {
+    "default_popup": "src/popup/popup.html",
+    "default_title": "Tab Manager"
+  },
+  "background": {
+    "service_worker": "src/background/background.js"
+  },
+  "permissions": [
+    "tabs",
+    "tabGroups",
+    "storage",
+    "alarms"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ]
+}
