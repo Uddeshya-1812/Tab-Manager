@@ -17,11 +17,3 @@ A simple Chrome Extension to manage your tabs, group them by domain, close dupli
 - Chrome Extension APIs (`tabs`, `tabGroups`, `storage`, `alarms`, `runtime`)
 - Manifest V3 Architecture (Zero idle memory overhead)
 
-## How to Install (Developer Mode)
-
-1. Open Google Chrome.
-2. Go to `chrome://extensions/` in your address bar.
-3. In the top right corner, toggle **Developer mode** to ON.
-4. Click on the **Load unpacked** button in the top left.
-5. Select the `tab manager` folder (this folder containing the `manifest.json` file).
-6. The extension will be loaded and you will see its icon in your extensions toolbar. Pin it for easy access!
