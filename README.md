@@ -7,7 +7,6 @@ A simple and efficient Chrome Extension to manage your browser tabs, group them 
 - **Active Tab Management**: View, switch, and individually close open tabs and Chrome Tab Groups directly from the popup.
 - **Group by Domain**: Automatically organize your loose tabs into Chrome Tab Groups based on their domains (e.g., all `github.com` tabs get grouped together).
 - **Close Duplicates**: Instantly find and close any duplicate tabs that share the exact same URL.
-- **Auto-Hibernation**: A background service worker tracks your tab usage. If a group or a loose tab sits untouched for 6 hours, it automatically closes the tabs and saves them to your local storage to free up RAM.
 - **Manual Hibernation**: Click the hibernate button next to any Active Group in the popup to instantly close it and save it.
 - **Saved Groups**: View all your hibernated groups. You can restore them, export them as JSON files to back them up, or import JSON backups from another computer.
 - **Storage Limits**: Implements a strict 1 MB limit on saved data to prevent browser slowdowns. If you hit the limit, a warning appears allowing you to manually remove data or auto-remove the oldest groups.
@@ -22,4 +21,4 @@ A simple and efficient Chrome Extension to manage your browser tabs, group them 
 ## Tech Stack
 - Vanilla JavaScript (ES6+)
 - HTML5 & CSS3
-- Chrome Extension APIs (`tabs`, `tabGroups`, `storage`, `alarms`, `runtime`)
+- Chrome Extension APIs (`tabs`, `tabGroups`, `storage`)

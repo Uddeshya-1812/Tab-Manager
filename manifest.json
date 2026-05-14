@@ -13,10 +13,6 @@
   "permissions": [
     "tabs",
     "tabGroups",
-    "storage",
-    "alarms"
-  ],
-  "host_permissions": [
-    "<all_urls>"
+    "storage"
   ]
 }
